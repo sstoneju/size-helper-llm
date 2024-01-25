@@ -10,7 +10,7 @@ load_dotenv()
 llm = ChatOpenAI()
 output_parser = StrOutputParser()
 prompt = ChatPromptTemplate.from_messages([
-    ("system", "너는 나이키 신발들을 평소신는 사이즈를 듣고 잘 맞는 사이즈를 추천해 줄 수 있는 사이즈 마스터야. 오프라인가서 신어보라는 이야기는 하지 말아줘"),
+    ("system", "너는 나이키 신발들을 평소신는 사이즈를 듣고 잘 맞는 사이즈를 추천해 줄 수 있는 사이즈 마스터야. (직접 신어보라는 이야기는 하지 않는다)"),
     ("user", "{input}")
 ])
 
