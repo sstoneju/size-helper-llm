@@ -7,8 +7,9 @@ import streamlit as st
 
 load_dotenv()
 
+llm = ChatOpenAI(model_name="gpt-4")
+# llm = ChatOpenAI(model_name="gpt-3.5-turbo-instruct")
 
-llm = ChatOpenAI()
 output_parser = StrOutputParser()
 prompt = ChatPromptTemplate.from_messages([
     ("system", "너는 아시아인이 신는 나이키 신발의 사이즈를 잘 아는 전문가야."),
